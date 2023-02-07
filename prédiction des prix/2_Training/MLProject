@@ -1,0 +1,17 @@
+name: bloc5
+docker_env:
+  image: bloc5-pricing-optimization
+  environment: [
+    "MLFLOW_TRACKING_URI",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "BACKEND_STORE_URI",
+    "ARTIFACT_ROOT"
+  ]
+entry_points:
+  main:
+    parameters:
+      min_samples_split: {type: int, default: 2},
+      min_samples_leaf: {type: int, default: 1},
+    command: "python train.py --min_samples_split {min_samples_split} --min_samples_leaf {min_samples_leaf}"
+

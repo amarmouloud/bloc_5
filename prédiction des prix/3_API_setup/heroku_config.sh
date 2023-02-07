@@ -1,0 +1,5 @@
+APP_NAME="bloc5-pricing-prediction"
+heroku config:set ARTIFACT_ROOT=$ARTIFACT_ROOT -a $APP_NAME
+heroku config:set AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -a $APP_NAME
+heroku config:set AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -a $APP_NAME
+heroku config:set MLFLOW_TRACKING_URI=$MLFLOW_TRACKING_URI -a $APP_NAME
